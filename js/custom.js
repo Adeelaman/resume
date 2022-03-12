@@ -20,3 +20,9 @@ $('.download_resume').on('click', function () {
     req.send();
     return false;
 });
+
+$('.folio-item-table').click(function(e) {
+    e.preventDefault();
+    let url = $(this).closest('a').attr('href');
+    window.open(url, '_blank');
+});
