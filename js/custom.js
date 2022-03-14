@@ -14,7 +14,7 @@ $('.download_resume').on('click', function () {
         console.log(blob.size);
         let link=document.createElement('a');
         link.href=window.URL.createObjectURL(blob);
-        link.download="Adeel's_resume.pdf";
+        link.download="Adeel_s_resume.pdf";
         link.click();
     };
     req.send();
