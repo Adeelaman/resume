@@ -26,3 +26,27 @@ $('.folio-item-table').click(function(e) {
     let url = $(this).closest('a').attr('href');
     window.open(url, '_blank');
 });
+
+$('#sendMail').submit(function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    let url = "https://formspree.io/f/mayvbwlo";
+    $.ajax({
+        url: url,
+        method: "POST",
+        data: $(this).serialize(),
+        dataType: "json",
+        success: function (response) {
+            if (response.ok) {
+                $('#message-success').fadeIn(1000).delay(5000).fadeOut(1000);
+                $("#sendMail")[0].reset();
+            } else {
+                $('#message-warning').fadeIn(1000).delay(5000).fadeOut(1000);
+                return false;
+            }
+        }, error: function (ErrorResponse) {
+            $('#message-warning').fadeIn(1000).delay(5000).fadeOut(1000);
+            return false;
+        }
+    });
+})
