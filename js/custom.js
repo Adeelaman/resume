@@ -6,12 +6,12 @@
  */
 $('.download_resume').on('click', function (e) {
     e.preventDefault();  //stop the browser from following
-    var link = document.createElement('a');
-    link.href = "/files/adeel_s_resume.pdf";
-    link.download = "Adeel_s_resume.pdf";
-    link.click();
-    link.remove();
-    // window.location.href = '/files/adeel_s_resume.pdf';
+    // var link = document.createElement('a');
+    // link.href = "/files/adeel_s_resume.pdf";
+    // link.download = "Adeel_s_resume.pdf";
+    // link.click();
+    // link.remove();
+    window.location.href = '/files/adeel_s_resume.pdf';
     return false;
 
     // let req = new XMLHttpRequest();
