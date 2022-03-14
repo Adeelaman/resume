@@ -7,7 +7,7 @@
 $('.download_resume').on('click', function (e) {
     e.preventDefault();  //stop the browser from following
     var link = document.createElement('a');
-    link.href = "raw/main/files/adeel_s_resume.pdf";
+    link.href = "https://github.com/Adeelaman/resume/raw/main/files/adeel_s_resume.pdf";
     link.download = "Adeel_s_resume.pdf";
     link.click();
     link.remove();
